@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AxisPrime Technologies | Premium Digital Infrastructure & Experience Design</title>
+  <meta name="description" content="Enterprise-grade digital platforms and immersive experiences. Trusted by CTOs and founders for scalable, future-proof digital infrastructure solutions.">
+  <link rel="canonical" href="https://axisprime.tech">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;600&display=swap');
+    
+    :root {
+      --accent-blue: #3b82f6;
+      --accent-purple: #8b5cf6;
+      --bg-dark: #050505;
+      --glass-bg: rgba(15, 15, 15, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.08);
+    }
+
+    body { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      background-color: var(--bg-dark); 
+      color: white; 
+      cursor: default;
+    }
+
+    /* Professional Mesh Background */
+    .bg-professional {
+      background-color: #050505;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.1) 0, transparent 50%), 
+        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.08) 0, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Updated Header Styles */
+    .header-main {
+      background: #000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: var(--accent-blue);
+    }
+
+    /* Static Professional Cards */
+    .prof-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s ease;
+    }
+    .prof-card:hover {
+      border-color: var(--accent-blue);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-4px);
+    }
+
+    /* Text Gradient Animation */
+    .animate-gradient {
+      background: linear-gradient(to right, #60a5fa, #a78bfa, #60a5fa);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 8s linear infinite;
+    }
+    @keyframes shine {
+      to { background-position: 200% center; }
+    }
+
+    /* Animated Marquee */
+    .marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-content {
+      display: inline-block;
+      animation: marquee 40s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .glow-spot {
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* Footer Image Style Support */
+    .footer-heading {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+    .footer-heading::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--accent-blue);
+    }
+  </style>
+</head>
+
+<body class="antialiased overflow-x-hidden bg-professional">
+
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <!-- Top Utility Bar -->
+    <div class="bg-[#0c0c0c] border-b border-white/5 py-2 hidden md:block">
+      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-2 text-[11px] text-gray-400">
+            <div class="w-5 h-5 bg-blue-600 rounded-sm flex items-center justify-center">
+              <i data-lucide="facebook" class="w-3 h-3 text-white"></i>
+            </div>
+            <span>Follow us on Facebook</span>
+          </div>
+          <div class="flex items-center gap-2 text-[11px] text-gray-400">
+            <i data-lucide="mail" class="w-3 h-3 text-blue-500"></i>
+            <span>hello@axisprime.tech</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 text-[11px] text-gray-400">
+          <a href="#" class="hover:text-white">Help Desk</a>
+          <span class="text-white/10">|</span>
+          <a href="#" class="hover:text-white">Login</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="header-main px-6 lg:px-12 py-4">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-7 h-7 bg-white rounded-sm flex items-center justify-center">
+             <div class="w-3 h-3 bg-black transform rotate-45"></div>
+          </div>
+          <span class="text-xl font-bold tracking-tight text-white uppercase">AxisPrime</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-blue-500">HOME</a>
+          <a href="#" class="nav-link">ABOUT US</a>
+          <a href="operational.html" class="nav-link">SOLUTIONS</a>
+          <a href="#" class="nav-link">PORTFOLIO</a>
+          <a href="#" class="nav-link">BLOG</a>
+          <a href="contact.html" class="nav-link">CONTACT US</a>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-4">
+          <div class="hidden sm:flex items-center bg-white/5 border border-white/10 rounded-sm px-3 py-1.5">
+            <input type="text" placeholder="Search..." class="bg-transparent text-xs outline-none w-24 placeholder:text-gray-600">
+            <i data-lucide="search" class="w-3 h-3 text-gray-500"></i>
+          </div>
+          <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white text-[11px] font-bold px-5 py-2.5 rounded-sm transition-all uppercase tracking-wider">
+            GET QUOTE
+          </a>
+          <button class="lg:hidden text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Adjust padding-top to account for the double-row header -->
+    <section class="relative min-h-screen flex items-center justify-center pt-32">
+      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8">
+            <span class="relative flex h-2 w-2">
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-blue-400">Next-Gen Infrastructure 2026</span>
+        </div>
+        
+        <h1 class="text-6xl md:text-[120px] font-extrabold tracking-tighter leading-[0.9] mb-10">
+          Digital <br/>
+          <span class="animate-gradient italic">Architects</span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed mb-16 px-4">
+          We engineer the silent engines behind the world’s most ambitious digital brands. Scalable, secure, and impeccably designed.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <button onclick="document.getElementById('portfolio').scrollIntoView()" class="px-12 py-5 bg-blue-600 font-bold rounded-xl transition-all hover:bg-blue-700 hover:scale-105 active:scale-95 shadow-lg shadow-blue-900/20">
+            Explore Our Work
+          </button>
+          <button onclick="document.getElementById('contact').scrollIntoView()" class="px-12 py-5 border border-white/20 font-bold rounded-xl hover:bg-white/5 transition-all">
+            Schedule Consultation
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-4">
+        <p class="text-[10px] uppercase tracking-[0.5em] text-gray-500">Scroll to Explore</p>
+        <div class="w-px h-16 bg-gradient-to-b from-blue-500 to-transparent"></div>
+      </div>
+    </section>
+
+    <div class="py-12 border-y border-white/5 bg-black/50 overflow-hidden relative z-10">
+        <div class="marquee-container">
+            <div class="marquee-content flex items-center gap-20">
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">Next.js 15</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">Kubernetes</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">TypeScript</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">AWS Cloud</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">PostgreSQL</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">Redis</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">Docker</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">GraphQL</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">Next.js 15</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">Kubernetes</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">TypeScript</span>
+                <span class="text-2xl font-bold text-white/20 uppercase tracking-tighter">AWS Cloud</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="capabilities" class="py-40 relative">
+      <div class="glow-spot top-0 right-0"></div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-32 gap-10">
+          <div class="max-w-2xl">
+            <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-8">Core <br/><span class="text-blue-500">Capabilities</span></h2>
+            <p class="text-2xl text-gray-400 font-light italic border-l-4 border-blue-600 pl-8 py-2">
+              "We don't just ship features; we engineer competitive advantages through technological superiority."
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="prof-card p-12 rounded-3xl">
+            <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-10">
+              <i data-lucide="code-2" class="w-8 h-8 text-blue-500"></i>
+            </div>
+            <h3 class="text-3xl font-bold mb-6 tracking-tight">Full-Stack <br/>Engineering</h3>
+            <p class="text-gray-400 mb-10 text-lg leading-relaxed font-light">End-to-end application development with modern frameworks, scalable architecture, and enterprise-grade security protocols.</p>
+            <div class="grid grid-cols-1 gap-4 text-xs font-bold text-blue-400 uppercase tracking-widest">
+              <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> React / Next.js Ecosystem</div>
+              <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Distributed Systems</div>
+              <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Microservices Arch</div>
+            </div>
+          </div>
+
+          <div class="prof-card p-12 rounded-3xl">
+            <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-10">
+              <i data-lucide="palette" class="w-8 h-8 text-purple-500"></i>
+            </div>
+            <h3 class="text-3xl font-bold mb-6 tracking-tight">Experience <br/>Design (UX)</h3>
+            <p class="text-gray-400 mb-10 text-lg leading-relaxed font-light">Immersive user experiences that combine aesthetic excellence with functional precision, optimized for high engagement.</p>
+            <div class="grid grid-cols-1 gap-4 text-xs font-bold text-purple-400 uppercase tracking-widest">
+              <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-purple-500 rounded-full"></div> Interaction Physics</div>
+              <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-purple-500 rounded-full"></div> Brand Digital DNA</div>
+              <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-purple-500 rounded-full"></div> Conversion Science</div>
+            </div>
+          </div>
+
+          <div class="prof-card p-12 rounded-3xl">
+            <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-10">
+              <i data-lucide="shield-check" class="w-8 h-8 text-emerald-500"></i>
+            </div>
+            <h3 class="text-3xl font-bold mb-6 tracking-tight">Cloud <br/>Infrastructure</h3>
+            <p class="text-gray-400 mb-10 text-lg leading-relaxed font-light">Robust, scalable systems designed for enterprise demands with advanced security, monitoring, and optimization.</p>
+            <div class="grid grid-cols-1 gap-4 text-xs font-bold text-emerald-400 uppercase tracking-widest">
+              <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div> Kubernetes Orchestration</div>
+              <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div> Multi-Cloud DevOps</div>
+              <div class="flex items-center gap-3"><div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div> SOC2 Compliance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="py-40 border-y border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-24 items-center">
+          <div>
+            <h2 class="text-6xl md:text-7xl font-black mb-12 leading-[0.9] tracking-tighter">
+              Engineering <span class="text-blue-500">Precision</span>.
+            </h2>
+            <div class="space-y-10 text-gray-400 text-xl font-light leading-relaxed">
+              <p>We don't build websites. We architect digital ecosystems that evolve with your business, scale with your growth, and adapt to future technologies.</p>
+              <p>Every line of code is peer-reviewed, every asset is optimized for performance, and every deployment is automated via industry-leading CI/CD pipelines.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-12 mt-20">
+              <div>
+                <div class="text-5xl font-black mb-2 text-white">10+</div>
+                <div class="text-[10px] uppercase tracking-[0.3em] text-gray-500 font-bold">Years Industry Lead</div>
+              </div>
+              <div>
+                <div class="text-5xl font-black mb-2 text-white">99.9%</div>
+                <div class="text-[10px] uppercase tracking-[0.3em] text-gray-500 font-bold">Service Reliability</div>
+              </div>
+              <div>
+                <div class="text-5xl font-black mb-2 text-white">50+</div>
+                <div class="text-[10px] uppercase tracking-[0.3em] text-gray-500 font-bold">Global Enterprises</div>
+              </div>
+              <div>
+                <div class="text-5xl font-black mb-2 text-white">24/7</div>
+                <div class="text-[10px] uppercase tracking-[0.3em] text-gray-500 font-bold">Priority Support</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="bg-gradient-to-tr from-zinc-900 to-black p-1 rounded-[40px] border border-white/10 shadow-2xl">
+                <div class="relative w-full aspect-square rounded-[38px] overflow-hidden flex items-center justify-center bg-zinc-950">
+                    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 30px 30px;"></div>
+                    <i data-lucide="cpu" class="w-32 h-32 text-blue-600 relative z-10 opacity-80"></i>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="py-40 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
+          <div>
+            <h2 class="text-7xl font-black mb-8 tracking-tighter">Selected <span class="text-gray-600">Work</span></h2>
+            <p class="text-xl text-gray-400 max-w-xl font-light">Proof is in the performance. A collection of platforms that move billions in capital and petabytes of data.</p>
+          </div>
+          <button class="px-8 py-4 border border-white/10 rounded-xl hover:bg-white/5 transition-all text-xs font-bold uppercase tracking-[0.2em]">View All Projects</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div class="prof-card group rounded-[40px] overflow-hidden">
+            <div class="p-10 border-b border-white/5 flex justify-between items-center bg-black/40">
+              <span class="text-[10px] font-black uppercase tracking-widest text-blue-400">FinTech Ecosystem • 2024</span>
+              <i data-lucide="arrow-up-right" class="w-5 h-5 text-gray-600 group-hover:text-white transition-all"></i>
+            </div>
+            <div class="p-12">
+              <h3 class="text-5xl font-bold mb-8 tracking-tighter group-hover:text-blue-500 transition-colors">QuantX Analytics</h3>
+              <p class="text-gray-400 text-lg mb-10 leading-relaxed font-light">Real-time data engine processing 10M+ daily transactions with sub-200ms latency. Distributed architecture built for institutional traders.</p>
+              <div class="flex flex-wrap gap-3 mb-12">
+                <span class="px-4 py-2 bg-white/5 rounded-lg text-[10px] font-black uppercase border border-white/10">Rust</span>
+                <span class="px-4 py-2 bg-white/5 rounded-lg text-[10px] font-black uppercase border border-white/10">Go</span>
+                <span class="px-4 py-2 bg-white/5 rounded-lg text-[10px] font-black uppercase border border-white/10">Clickhouse</span>
+              </div>
+              <div class="grid grid-cols-3 gap-8 border-t border-white/5 pt-10">
+                <div><p class="text-3xl font-black mb-1">99.99%</p><p class="text-[9px] uppercase font-bold text-gray-500 tracking-widest">Uptime</p></div>
+                <div><p class="text-3xl font-black mb-1">10M+</p><p class="text-[9px] uppercase font-bold text-gray-500 tracking-widest">Daily Txs</p></div>
+                <div><p class="text-3xl font-black mb-1">12ms</p><p class="text-[9px] uppercase font-bold text-gray-500 tracking-widest">Latency</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prof-card group rounded-[40px] overflow-hidden">
+            <div class="p-10 border-b border-white/5 flex justify-between items-center bg-black/40">
+              <span class="text-[10px] font-black uppercase tracking-widest text-purple-400">E-Commerce • 2024</span>
+              <i data-lucide="arrow-up-right" class="w-5 h-5 text-gray-600 group-hover:text-white transition-all"></i>
+            </div>
+            <div class="p-12">
+              <h3 class="text-5xl font-bold mb-8 tracking-tighter group-hover:text-purple-500 transition-colors">VogueGlobal</h3>
+              <p class="text-gray-400 text-lg mb-10 leading-relaxed font-light">Omnichannel commerce platform serving 15+ countries. Features AI-driven personalization and sub-second catalog indexing.</p>
+              <div class="flex flex-wrap gap-3 mb-12">
+                <span class="px-4 py-2 bg-white/5 rounded-lg text-[10px] font-black uppercase border border-white/10">Next.js</span>
+                <span class="px-4 py-2 bg-white/5 rounded-lg text-[10px] font-black uppercase border border-white/10">Shopify API</span>
+                <span class="px-4 py-2 bg-white/5 rounded-lg text-[10px] font-black uppercase border border-white/10">AWS Lambda</span>
+              </div>
+              <div class="grid grid-cols-3 gap-8 border-t border-white/5 pt-10">
+                <div><p class="text-3xl font-black mb-1">300%</p><p class="text-[9px] uppercase font-bold text-gray-500 tracking-widest">Conv. Lift</p></div>
+                <div><p class="text-3xl font-black mb-1">$50M+</p><p class="text-[9px] uppercase font-bold text-gray-500 tracking-widest">Annual GMV</p></div>
+                <div><p class="text-3xl font-black mb-1">150+</p><p class="text-[9px] uppercase font-bold text-gray-500 tracking-widest">Warehouses</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="insights" class="py-40 relative overflow-hidden">
+      <div class="glow-spot bottom-0 left-0"></div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-32">
+          <h2 class="text-5xl md:text-8xl font-black mb-8 tracking-tighter">Trusted by <br/>Industry <span class="text-blue-500">Giants</span></h2>
+          <p class="text-xl text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">Our reputation is built on the success of those we serve. Hear from the visionaries at the helm.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="prof-card p-12 rounded-[40px]">
+            <div class="flex items-center gap-6 mb-10">
+              <div class="w-14 h-14 rounded-xl bg-blue-600 flex items-center justify-center font-bold text-lg">MS</div>
+              <div><p class="text-lg font-bold">Michael Stevens</p><p class="text-[10px] text-blue-500 font-black uppercase tracking-widest">CTO, TechCorp</p></div>
+            </div>
+            <p class="text-gray-300 text-lg italic mb-10 leading-relaxed font-light">"AxisPrime delivered a platform that exceeded our performance requirements by 300%. Their attention to scalability made all the difference during our Series C growth phase."</p>
+          </div>
+
+          <div class="prof-card p-12 rounded-[40px]">
+            <div class="flex items-center gap-6 mb-10">
+              <div class="w-14 h-14 rounded-xl bg-purple-600 flex items-center justify-center font-bold text-lg">AR</div>
+              <div><p class="text-lg font-bold">Anna Rodriguez</p><p class="text-[10px] text-purple-500 font-black uppercase tracking-widest">Founder, InnovateLab</p></div>
+            </div>
+            <p class="text-gray-300 text-lg italic mb-10 leading-relaxed font-light">"The technical sophistication and reliability of their solutions gave us the confidence to scale globally. Zero downtime in 18 months of intensive operation."</p>
+          </div>
+
+          <div class="prof-card p-12 rounded-[40px]">
+            <div class="flex items-center gap-6 mb-10">
+              <div class="w-14 h-14 rounded-xl bg-emerald-600 flex items-center justify-center font-bold text-lg">DK</div>
+              <div><p class="text-lg font-bold">David Kim</p><p class="text-[10px] text-emerald-500 font-black uppercase tracking-widest">VP Eng, DataFlow</p></div>
+            </div>
+            <p class="text-gray-300 text-lg italic mb-10 leading-relaxed font-light">"Their process is methodical and their code quality is exceptional. They understand enterprise requirements and deliver according to strict timelines."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-40 relative">
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-24 items-center">
+            <div>
+                <h2 class="text-6xl md:text-8xl font-black mb-12 tracking-tighter leading-none">Let's <br/>Build the <br/><span class="animate-gradient italic">Future.</span></h2>
+                <p class="text-2xl text-gray-400 mb-16 font-light leading-relaxed">Join the ranks of enterprises redefining their digital landscape.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-6 bg-white/5 p-6 rounded-2xl border border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center"><i data-lucide="mail" class="w-5 h-5"></i></div>
+                        <div><p class="text-lg font-bold">hello@axisprime.tech</p></div>
+                    </div>
+                    <div class="flex items-center gap-6 bg-white/5 p-6 rounded-2xl border border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center"><i data-lucide="phone" class="w-5 h-5"></i></div>
+                        <div><p class="text-lg font-bold">+1 (555) 012-3456</p></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-zinc-950 border border-white/10 p-10 lg:p-16 rounded-[40px] shadow-2xl">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <input type="text" placeholder="First Name" class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl focus:border-blue-500 outline-none transition-all placeholder:text-gray-700">
+                        <input type="text" placeholder="Last Name" class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl focus:border-blue-500 outline-none transition-all placeholder:text-gray-700">
+                    </div>
+                    <input type="email" placeholder="Email Address" class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl focus:border-blue-500 outline-none transition-all placeholder:text-gray-700">
+                    <select class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl focus:border-blue-500 outline-none text-gray-400">
+                        <option>Enterprise Web Platform</option>
+                        <option>Cloud Infrastructure Migr.</option>
+                        <option>Experience Design Audit</option>
+                        <option>Strategic Consultation</option>
+                    </select>
+                    <textarea rows="4" placeholder="Message / Brief" class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl focus:border-blue-500 outline-none resize-none placeholder:text-gray-700"></textarea>
+                    <button class="w-full bg-blue-600 py-5 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-blue-700 transition-all">
+                        Initiate Project
+                    </button>
+                    <p class="text-[9px] text-gray-600 text-center font-bold tracking-widest">NDAs PROVIDED UPON REQUEST</p>
+                </form>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-24 border-t border-white/5 bg-[#0a0a0a]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div>
+          <h4 class="text-lg font-bold text-white footer-heading">AxisPrime</h4>
+          <ul class="space-y-4 text-sm text-gray-400 font-medium">
+            <li><a href="#" class="hover:text-blue-500 transition-colors">About us</a></li>
+            <li><a href="contact.html" class="hover:text-blue-500 transition-colors">Get Quote</a></li>
+            <li><a href="#portfolio" class="hover:text-blue-500 transition-colors">Portfolio</a></li>
+            <li><a href="legal.html" class="hover:text-blue-500 transition-colors">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-white footer-heading">Company</h4>
+          <ul class="space-y-4 text-sm text-gray-400 font-medium">
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Life at AxisPrime</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Join Hands</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Knowledge Base</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Feedback</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Review</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-white footer-heading">Services</h4>
+          <ul class="space-y-4 text-sm text-gray-400 font-medium">
+            <li><a href="#" class="hover:text-blue-500 transition-colors">UI/UX Design</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Platform Engineering</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Cloud Infrastructure</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">AI & ML Solutions</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Legacy Modernization</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-white footer-heading">Subscribe</h4>
+          <div class="flex flex-col gap-4 mb-10">
+            <input type="email" placeholder="Enter your email address" class="bg-white/5 border border-white/10 px-4 py-3 rounded-sm text-sm focus:border-blue-500 outline-none transition-all placeholder:text-gray-600">
+            <button class="bg-blue-600 text-white font-bold py-3 px-6 rounded-sm uppercase tracking-widest text-xs hover:bg-blue-700 transition-all">
+                SUBSCRIBE
+            </button>
+          </div>
+          
+          <h5 class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 mb-6">FOLLOW US ON:</h5>
+          <div class="flex flex-wrap gap-2">
+            <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center bg-white/5 hover:bg-blue-600 hover:border-blue-600 transition-all group">
+                <i data-lucide="facebook" class="w-4 h-4 text-gray-400 group-hover:text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center bg-white/5 hover:bg-blue-600 hover:border-blue-600 transition-all group">
+                <i data-lucide="twitter" class="w-4 h-4 text-gray-400 group-hover:text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center bg-white/5 hover:bg-blue-600 hover:border-blue-600 transition-all group">
+                <i data-lucide="linkedin" class="w-4 h-4 text-gray-400 group-hover:text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center bg-white/5 hover:bg-blue-600 hover:border-blue-600 transition-all group">
+                <i data-lucide="rss" class="w-4 h-4 text-gray-400 group-hover:text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center bg-white/5 hover:bg-blue-600 hover:border-blue-600 transition-all group">
+                <i data-lucide="youtube" class="w-4 h-4 text-gray-400 group-hover:text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-white/5 text-center">
+        <p class="text-[10px] text-gray-600 font-bold uppercase tracking-widest">
+            Copyright 2026 © <a href="#" class="text-blue-500 hover:underline">AxisPrimeTechnologies.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      lucide.createIcons();
+
+      // Navbar Scroll Effect
+      const navbar = document.querySelector('nav.header-main');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          navbar.classList.add('py-2');
+          navbar.classList.remove('py-4');
+        } else {
+          navbar.classList.add('py-4');
+          navbar.classList.remove('py-2');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
